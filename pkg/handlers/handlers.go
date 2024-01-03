@@ -22,7 +22,7 @@ func NewRepo(a *config.AppConfig) *Repository {
 		App: a,
 	}
 }
-	
+
 // NewHandlers sets the repository for the handlers
 func NewHandlers(r *Repository) {
 	Repo = r
@@ -50,4 +50,3 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 		StringMap: stringMap,
 	})
 }
-	
