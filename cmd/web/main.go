@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/adrenaline03/bookingsApp/pkg/handlers"
-	"github.com/adrenaline03/bookingsApp/pkg/render"
+	"github.com/adrenaline03/bookingsApp/internal/handlers"
+	"github.com/adrenaline03/bookingsApp/internal/render"
 
-	"github.com/adrenaline03/bookingsApp/pkg/config"
+	"github.com/adrenaline03/bookingsApp/internal/config"
 
 	"github.com/alexedwards/scs/v2"
 )
