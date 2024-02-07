@@ -5,7 +5,6 @@ import (
 
 	"github.com/adrenaline03/bookingsApp/internal/config"
 	"github.com/adrenaline03/bookingsApp/internal/handlers"
-
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 )
@@ -29,6 +28,8 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Get("/contact", handlers.Repo.Contact)
 
 	mux.Get("/make-reservation", handlers.Repo.Reservation)
+	mux.Post("/make-reservation", handlers.Repo.PostReservation)
+	mux.Get("/reservation-summary", handlers.Repo.ReservationSummary)
 
 	fileServer := http.FileServer(http.Dir("./static/"))
 	mux.Handle("/static/*", http.StripPrefix("/static", fileServer))
